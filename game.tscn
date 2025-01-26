@@ -1,0 +1,197 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqqqtnxve4e2t"]
+
+[ext_resource type="PackedScene" uid="uid://c3l0gq7dmrom0" path="res://player.tscn" id="1_2d4e6"]
+[ext_resource type="Script" path="res://game.gd" id="1_mtt3r"]
+[ext_resource type="PackedScene" uid="uid://d3o6j3yhjf5sy" path="res://pine_tree.tscn" id="2_nypug"]
+[ext_resource type="Texture2D" uid="uid://qolsmv3tqx53" path="res://circle.png" id="4_timsk"]
+
+[sub_resource type="Curve2D" id="Curve2D_8rabd"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -400, -400, 0, 0, 0, 0, 2320, -400, 0, 0, 0, 0, 2320, 1480, 0, 0, 0, 0, -400, 1480, 0, 0, 0, 0, -400, -400)
+}
+point_count = 5
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_mtt3r")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_scale = 0.5
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 1.61094
+anchor_bottom = 1.62222
+offset_right = 1926.0
+offset_bottom = 1091.0
+metadata/_edit_use_anchors_ = true
+
+[node name="Trees" type="Node2D" parent="."]
+y_sort_enabled = true
+
+[node name="PineTree" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-55, -1019)
+scale = Vector2(1.2, 1.2)
+
+[node name="PineTree2" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-810, -1424)
+scale = Vector2(1.2, 1.2)
+
+[node name="PineTree3" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(413, 727)
+scale = Vector2(1.2, 1.2)
+
+[node name="PineTree4" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(978, -577)
+scale = Vector2(1.2, 1.2)
+
+[node name="PineTree5" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-1517, 631)
+scale = Vector2(1.2, 1.2)
+
+[node name="PineTree6" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-864, -290)
+scale = Vector2(1.4, 1.4)
+
+[node name="PineTree7" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-531, 71)
+scale = Vector2(1.4, 1.4)
+
+[node name="PineTree8" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(302, 1629)
+scale = Vector2(1.4, 1.4)
+
+[node name="PineTree9" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(1446, 415)
+scale = Vector2(1.4, 1.4)
+
+[node name="PineTree10" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(385, -788)
+scale = Vector2(1.4, 1.4)
+
+[node name="PineTree11" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(633, 1.99997)
+scale = Vector2(1.6, 1.6)
+
+[node name="PineTree12" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(822, -1365)
+scale = Vector2(1.6, 1.6)
+
+[node name="PineTree13" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(886, 1491)
+scale = Vector2(1.6, 1.6)
+
+[node name="PineTree14" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-98, 562)
+scale = Vector2(1.6, 1.6)
+
+[node name="PineTree15" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-1421, -726)
+scale = Vector2(1.6, 1.6)
+
+[node name="PineTree16" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(73, -1554)
+scale = Vector2(1.8, 1.8)
+
+[node name="PineTree17" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(1166, -87)
+scale = Vector2(1.8, 1.8)
+
+[node name="PineTree18" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-260, 1411)
+scale = Vector2(1.8, 1.8)
+
+[node name="PineTree19" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-913, 800)
+scale = Vector2(1.8, 1.8)
+
+[node name="PineTree20" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-1369, 69)
+scale = Vector2(2, 2)
+
+[node name="PineTree21" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-205, -322)
+scale = Vector2(2, 2)
+
+[node name="PineTree22" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-1029, 1374)
+scale = Vector2(2, 2)
+
+[node name="PineTree23" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(1459, -744)
+scale = Vector2(2, 2)
+
+[node name="PineTree24" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(-767, -912)
+scale = Vector2(2, 2)
+
+[node name="PineTree25" parent="Trees" instance=ExtResource("2_nypug")]
+position = Vector2(1141, 862)
+scale = Vector2(2, 2)
+
+[node name="Player" parent="." instance=ExtResource("1_2d4e6")]
+collision_mask = 5
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-955, -551)
+curve = SubResource("Curve2D_8rabd")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-400, -400)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.74902)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 75
+text = "Game Over"
+
+[node name="Circle" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("4_timsk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+z_index = -1
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+scale = Vector2(2, 2)
+build_mode = 1
+polygon = PackedVector2Array(156, -988, -156, -988, -454, -891, -707, -707, -891, -454, -988, -156, -988, 156, -891, 454, -707, 707, -454, 891, -156, 988, 156, 988, 454, 891, 707, 707, 891, 454, 988, 156, 988, -156, 891, -454, 707, -707, 454, -891)
+
+[node name="Line2D" type="Line2D" parent="StaticBody2D/CollisionPolygon2D"]
+points = PackedVector2Array(156, -988, -156, -988, -454, -891, -707, -707, -891, -454, -988, -156, -988, 156, -891, 454, -707, 707, -454, 891, -156, 988, 156, 988, 454, 891, 707, 707, 891, 454, 988, 156, 988, -156, 891, -454, 707, -707, 454, -891, 156, -988)
+default_color = Color(0, 0, 0, 1)
+
+[connection signal="health_depleted" from="Player" to="." method="_on_player_health_depleted"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

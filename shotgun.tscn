@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://c8vsd1x78l04h"]
+
+[ext_resource type="Texture2D" uid="uid://cswb5do8rrj7q" path="res://pistol/pistol.png" id="1_3cdov"]
+[ext_resource type="Script" path="res://shotgun.gd" id="1_fwo3c"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q4i36"]
+radius = 488.037
+
+[node name="Shotgun" type="Area2D"]
+z_index = 1
+script = ExtResource("1_fwo3c")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_q4i36")
+
+[node name="GunPivot" type="Marker2D" parent="."]
+
+[node name="Pistol" type="Sprite2D" parent="GunPivot"]
+modulate = Color(0.762049, 0.675169, 0, 1)
+position = Vector2(40, 0)
+texture = ExtResource("1_3cdov")
+
+[node name="GunBarrel" type="Marker2D" parent="GunPivot/Pistol"]
+unique_name_in_owner = true
+position = Vector2(19, -11)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
