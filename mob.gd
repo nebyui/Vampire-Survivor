@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @onready var player = get_node("/root/Game/Player")
 var direction
-var health = 3
+var health = 2
 var speed = 300
 var mob_upgrade_chance
 const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
@@ -15,21 +15,20 @@ func _ready() -> void:
 
 	
 	if mob_upgrade_chance == 20:
-		health = 10
+		health = 5
 		speed = 700
 		$Slime/%SlimeBodyHurt.modulate = Color(1, 0.9, 0.7, 0)
-		$Slime/%SlimeBody.modulate = Color(0.8, 0.8, 0.8, 1)
+		$Slime/%SlimeBody.self_modulate = Color(0.8, 0.8, 0.8, 1)
 		$Slime/%SlimeFace.modulate = Color(1, 1, 1, 1)
 	elif mob_upgrade_chance == 1:
-		health = 50
-		speed = 200
+		health = 25
 		scale = Vector2(2, 2)
 		$Slime/%SlimeBodyHurt.modulate = Color(1, 0.9, 0.7, 0)
 		$Slime/%SlimeBody.self_modulate = Color(0.3, 0.3, 0.9, 1)
 		$Slime/%SlimeFace.modulate = Color(.9, .9, 0, 1)
 		
 	elif mob_upgrade_chance >= 15:
-		health = 10
+		health = 5
 		$Slime/%SlimeBodyHurt.modulate = Color(1, 0.9, 0.7, 0)
 		$Slime/%SlimeBody.self_modulate = Color(1, 0.3, 0.3, 1)
 		$Slime/%SlimeFace.modulate = Color(0, 0, 0, 1)

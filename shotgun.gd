@@ -5,7 +5,7 @@ var target_enemy
 var random_rotation
 
 # Modifications
-var fire_rate: float = 0.6
+var fire_rate: float = 0.8
 var fire_counter: float = 0.8
 const BULLET = preload("res://shot.tscn")
 
@@ -29,7 +29,7 @@ func _physics_process(delta: float) -> void:
 	look_at(get_global_mouse_position())
 
 func shoot():
-	for i in 20:
+	for i in 12:
 		random_rotation = randf_range(-0.2, 0.2)
 		var bullet_instance = BULLET.instantiate()
 		bullet_instance.global_position = %GunBarrel.global_position

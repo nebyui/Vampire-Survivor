@@ -1,14 +1,13 @@
+res://mob.tscn
+res://machine_gun.gd
 res://game.tscn
 res://player.tscn
 res://characters/happy_boo/happy_boo.tscn
-res://mob.tscn
 res://characters/slime/slime.tscn
 res://machine_gun.tscn
 res://bullet.tscn
 res://shotgun.tscn
 res://shot.tscn
 res://pine_tree.tscn
-res://machine_gun.gd
-res://shotgun.gd
+res://player.gd
 res://game.gd
-res://mob.gd

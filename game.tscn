@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bqqqtnxve4e2t"]
+[gd_scene load_steps=5 format=3 uid="uid://bqqqtnxve4e2t"]
 
 [ext_resource type="PackedScene" uid="uid://c3l0gq7dmrom0" path="res://player.tscn" id="1_2d4e6"]
 [ext_resource type="Script" path="res://game.gd" id="1_mtt3r"]
 [ext_resource type="PackedScene" uid="uid://d3o6j3yhjf5sy" path="res://pine_tree.tscn" id="2_nypug"]
-[ext_resource type="Texture2D" uid="uid://qolsmv3tqx53" path="res://circle.png" id="4_timsk"]
 
 [sub_resource type="Curve2D" id="Curve2D_8rabd"]
 _data = {
@@ -174,10 +173,6 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 75
 text = "Game Over"
-
-[node name="Circle" type="Sprite2D" parent="."]
-visible = false
-texture = ExtResource("4_timsk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 z_index = -1

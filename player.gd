@@ -6,6 +6,7 @@ var health: float = 100.0
 const DAMAGE_RATE = 15
 var overlapping_mobs
 var rotation_temp
+var max_joystick_value = 0.3
 
 var machine_gun = preload("res://machine_gun.tscn")
 var shotgun = preload("res://shotgun.tscn")
@@ -21,7 +22,16 @@ func _ready() -> void:
 
 func _physics_process(delta: float) -> void:
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = direction * 600
+	
+	#print(Input.get_action_strength("move_right"), ", ", Input.get_action_strength("move_down"), ", ", Input.get_action_strength("move_left"), ", ", Input.get_action_strength("move_up"))
+	#print(direction)
+	
+	if direction.length() > max_joystick_value:
+		max_joystick_value = direction.length()
+	
+	
+	velocity = 600 * (direction / max_joystick_value)
+	print(velocity)
 	move_and_slide()
 	
 	if velocity.length() > 0.0:

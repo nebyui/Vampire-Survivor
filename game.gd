@@ -14,9 +14,9 @@ func spawn_mob():
 	add_child(new_mob)
 
 
-func _on_timer_timeout() -> void:
-	for i in 10:
-		spawn_mob()
+#func _on_timer_timeout() -> void:
+	#for i in 10:
+		#spawn_mob()
 
 
 func _on_player_health_depleted() -> void:
